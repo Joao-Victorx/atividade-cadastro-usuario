@@ -28,7 +28,7 @@ function salvarUser() {
         criaLista();
     }
     else {
-        alert("Preencha o campo nome");
+        alert("Preencha o campo nome!");
     }
 }
 
@@ -36,7 +36,7 @@ function criaLista() {
     let tabela = document.getElementById('tabela').innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th></tr>";
 
     for (let i = 0; i <= (dadosLista.length - 1); i++) {
-        tabela += "<tr><td>" + dadosLista[i] + "</td><td> <button onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button> <button onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button> </td></tr>";
+        tabela += "<tr><td class='align-middle fw-semibold'>" + dadosLista[i] + "</td><td> <button class='btn btn-success fw-semibold' onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</button> <button class='btn btn-danger fw-semibold' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button> </td></tr>";
         document.getElementById('tabela').innerHTML = tabela;
     }
 }
